@@ -1,6 +1,6 @@
 const personForm = document.querySelector('form')
 
-personForm.onsubmit = (event) => {
+const handleSubmit = (event) => {
     event.preventDefault()
     const form = event.target
     const details = document.querySelector('.details')
@@ -15,13 +15,13 @@ personForm.onsubmit = (event) => {
     // details.appendChild(em)
     // details.
     const colorDiv = `
-    <div style= "background-color: ${haircolor}"></div>`
+    <div style= "height: 50px; width: 100px; background-color: ${hairColor}"></div>`
 
     details.innerHTML = `
         <ul>
             <li> Name: ${personName} </li> 
-            <li> Hair Color: ${hairColor} </li> 
+            <li> Hair Color: ${colorDiv} </li>
         </ul>
-    `
-    
+    `    
 }
+personForm.addEventListener('submit', handleSubmit);
