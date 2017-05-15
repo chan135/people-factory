@@ -7,9 +7,21 @@ personForm.onsubmit = (event) => {
 
 
     const personName = (form.personName.value)
+    const hairColor = form.hairColor.value;
     // details.innerHTML = `<em>${personName}</em>`
-    const em = document.createElement('em')
+    // const em = document.createElement('em')
 
-    em.textContent = personName
-    details.appendChild(em)
+    // em.textContent = personName
+    // details.appendChild(em)
+    // details.
+    const colorDiv = `
+    <div style= "background-color: ${haircolor}"></div>`
+
+    details.innerHTML = `
+        <ul>
+            <li> Name: ${personName} </li> 
+            <li> Hair Color: ${hairColor} </li> 
+        </ul>
+    `
+    
 }
